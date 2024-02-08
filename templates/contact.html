@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FinTrust - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5F9F7; /* Update background color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #00D0B2; /* Update navbar background color */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 50px; /* Add margin-top to move the navbar down */
+        }
+
+        .navbar img {
+            margin-right: 10px;
+            max-height: 40px;
+        }
+
+        .navbar a {
+            float: left;
+            color: #015F71; /* Update navbar text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold; /* Add font-weight to make the text bold */
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            color: #015F71; /* Update heading color */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #015F71; /* Update submit button background color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p.error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        footer {
+            color: #015F71; /* Update footer text color */
+            text-align: center;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #015F71; /* Update footer link color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='icon.png') }}" alt="Your Image" style="position: absolute; top: 10px; left: 10px; max-height: 40px;">
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+
+    <h1>Contact Us</h1>
+    <form action="/contact" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <input type="submit" value="Submit">
+        <p class="error">{{ error }}</p>
+    </form>
+
+    <footer>
+        Trademark &copy; 2024 FinTrust
+    </footer>
+</body>
+</html>

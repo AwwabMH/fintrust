@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FinTrust - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5F9F7; /* Update background color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #00D0B2; /* Update navbar background color */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 50px; /* Add margin-top to move the navbar down */
+        }
+
+        .navbar img {
+            margin-right: 10px;
+            max-height: 40px;
+        }
+
+        .navbar a {
+            float: left;
+            color: #015F71; /* Update navbar text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold; /* Add font-weight to make the text bold */
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            color: #015F71; /* Update heading color */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p.success-message {
+            color: #015F71; /* Update success message color */
+            text-align: center;
+            font-size: 18px;
+            margin-top: 50px;
+        }
+
+        footer {
+            color: #015F71; /* Update footer text color */
+            text-align: center;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #015F71; /* Update footer link color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='icon.png') }}" alt="Your Image" style="position: absolute; top: 10px; left: 10px; max-height: 40px;">
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+    
+    <h1>Contact Form Submitted Successfully</h1>
+    <p class="success-message">Thank you for contacting us. We will get back to you shortly.</p>
+
+    <footer>
+        Trademark &copy; 2024 FinTrust
+    </footer>
+</body>
+</html>
